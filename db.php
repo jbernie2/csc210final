@@ -14,7 +14,7 @@
 
 		//make sure database existss   
 		$db = mysql_select_db("grad_to_go"); 
-		if(!$db){       
+		if(!$db){
 			die("Can not access DB: " . mysql_error()); 
 		}
 	}
