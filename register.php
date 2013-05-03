@@ -23,11 +23,11 @@
 
 	
 	//check for valid username
-	if(strlen($username) > 30){
+	if(strlen($email) > 30){
     	header('Location: register_form.php');
 	}	
 
-	echo "
+	echo "valid "
 	//check to see if that user name already exists
 	$uniqueUser = mysql_query("SELECT email FROM users
 						WHERE users.email = '$first_name'");
