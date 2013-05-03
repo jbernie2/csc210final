@@ -25,7 +25,9 @@
     	header('Location: register_form.php');
 	}
 
-	
+	mysqli_query($"INSERT INTO users (user_id, first_name, last_name, password, email)
+				VALUES ('$user_id','$first_name','$last_name','$password)");
+
 	
 
 ?>
