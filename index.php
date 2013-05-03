@@ -12,18 +12,18 @@
 
 
 		<form name="login" action="login.php" method="post">
-    			Username: <input type="text" name="username" />
+    			Email: <input type="text" name="email" />
     			Password: <input type="password" name="password" />
     		<input type="submit" value="Login" />
 		</form>
 	
 		<form name="register" action="register.php" method="post">
-    			Username: <input type="text" name="username" maxlength="30" />
+    			First Name: <input type="text" name="first_name" maxlength="30" />
+				Last Name: <input type="text" name="last_name" maxlength="30" />
     			Email: <input type="text" name="email" maxlength="50" />
 				Password: <input type="password" name="pass1" />
    				Password Again: <input type="password" name="pass2" />
     		<input type="submit" value="Register" />
 		</form>
-
 	</body>
 </html>
