@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+	alert("All up in this bitch");
 	
 	// let's set up some variables
 	var first_name = $("#first_name");
