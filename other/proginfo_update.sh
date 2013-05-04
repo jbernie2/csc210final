@@ -1,0 +1,1 @@
+mysql -u root -p grad_to_go < mysql_command
