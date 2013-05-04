@@ -11,9 +11,8 @@
 
 	//check if user was found in database
 	if(mysql_num_rows($validUser) > 0){
-		$_SESSION['']
+		$user_info = mysql_fetch_array($validUser);
+		$_SESSION['first_name'] = $user_info[0];
+		$_SESSION['user_id'] = $user_info[0];
 	}
-
-
-	
 ?>
