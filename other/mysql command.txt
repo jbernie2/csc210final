@@ -1,2 +1,1 @@
-DELETE FROM proginfo;
 LOAD DATA INFILE '/var/www/html/csc210final/proginfo.csv' replace INTO TABLE proginfo FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (program_id,program_name,due_date,fee,recs,gre,transcripts,school,link,degree_type,degree_name);
