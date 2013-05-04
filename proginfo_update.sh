@@ -1,1 +1,1 @@
-mysql -u root -p grad_to_go < mysql_command
+mysql -u friend -h 'ec2-184-72-196-134.compute-1.amazonaws.com' -pfriend < mysql_command
