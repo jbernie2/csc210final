@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Hello World</title>
+		<title>Search for a grad program with Grad to Go</title>
 		<link rel="stylesheet" type="text/css" href="../css/ourStyle.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		
 	</head>
 	
 	<?php
-		include "db.php";
+		include 'db.php';
 	
 		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
 		$degree = $_REQUEST["degree"];
