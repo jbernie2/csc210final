@@ -35,7 +35,7 @@
 					return 0;
 				}
 			}
-	*/
+	
 	?>
 	<body>
 	
@@ -82,4 +82,11 @@
 			?>
 		</table>
 	</body>
+</html>
+*/
+
+?>
+<body>
+<p>text</p>
+</body>
 </html>
