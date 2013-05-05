@@ -31,7 +31,7 @@
 					return 0;
 				}
 			}
-	/*
+
 	?>
 	<body>
 	
@@ -78,11 +78,4 @@
 			?>
 		</table>
 	</body>
-</html>
-*/
-
-?>
-<body>
-<p><?=$proginfo_query?></p>
-</body>
 </html>
