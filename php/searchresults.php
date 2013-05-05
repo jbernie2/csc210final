@@ -87,6 +87,6 @@
 
 ?>
 <body>
-<p>text</p>
+<p><?=$school?></p>
 </body>
 </html>
