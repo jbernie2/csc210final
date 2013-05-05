@@ -14,7 +14,7 @@
 		
 		include 'db.php';
 		
-		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));/
+		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
 		$degree = $_REQUEST["degree"];
 		$ermessage = 0;
 		/*
