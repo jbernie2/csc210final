@@ -1,3 +1,44 @@
-Heyyy
+How to enter stuff into the database:
 
-I shall attempt to edit this and push to my branch - Joseph
+edit prog.csv
+
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| program_id   | int(11)      | YES  |     | NULL    |       |
+| program_name | varchar(50)  | YES  |     | NULL    |       |
+| due_date     | varchar(20)  | YES  |     | NULL    |       |
+| fee          | varchar(10)  | YES  |     | NULL    |       |
+| recs         | varchar(10)  | YES  |     | NULL    |       |
+| gre          | varchar(10)  | YES  |     | NULL    |       |
+| transcripts  | varchar(10)  | YES  |     | NULL    |       |
+| school       | varchar(50)  | YES  |     | NULL    |       |
+| link         | varchar(100) | YES  |     | NULL    |       |
+| degree_type  | varchar(10)  | YES  |     | NULL    |       |
+| degree_name  | varchar(10)  | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+
+for program id, just put the next integer
+
+programe name = name of school (also the same as the school field)
+
+due date = date in format of '2/15'
+
+fee = numerical with a $
+
+recs = a single integer
+
+gre = yes, no, or optional
+
+transcripts = yes, no, or optional
+
+school = same as program name
+
+link = http address of program's webpage
+
+degree_type = MS, MA, PhD etc. (Must be in those forms or the search won't work)
+
+degree_name = Chemistry,Biology,Philosophy,Computer Science  (Must be in those forms or the search won't work)
+
+

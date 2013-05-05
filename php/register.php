@@ -2,7 +2,6 @@
 	//register.php
 	//creates a new user
 	
-
 	//display php errors on page
 	ini_set('display_errors', 1); 
 	error_reporting(E_ALL);
@@ -36,6 +35,7 @@
 	//check to see if that user name already exists
 	$uniqueUser = mysql_query("SELECT email FROM users
 							WHERE users.email = '$email'");
+
 	if(mysql_num_rows($uniqueUser) > 0){
 		$valid = false;
 		echo "user name taken";
