@@ -19,7 +19,7 @@
 		$ermessage = 0;
 		
 		db_connect();
-		/*
+		
 		$proginfo_query = "SELECT school, degree_type, degree_name, fee, recs, gre FROM proginfo ORDER
 								WHERE school LIKE \"%". $school . 
 								"%\" AND degree_name =\"" . $degree .
@@ -35,7 +35,7 @@
 					return 0;
 				}
 			}
-	
+	/*
 	?>
 	<body>
 	
