@@ -16,10 +16,10 @@
 		
 		db_connect();
 		
-		$proginfo_query = "SELECT school, degree_type, degree_name, fee, recs, gre FROM proginfo
+		$proginfo_query = "SELECT school, due_date, degree_type, degree_name, fee, recs, gre FROM proginfo
 								WHERE school LIKE \"%". $school . 
-								"%\" AND degree_name =\"" . $degree .
-								"\" ORDER BY school ASC;";
+								"%\" AND degree_name LIKE \"%" . $degree .
+								"%\" ORDER BY school ASC;";
 		$results = mysql_query($proginfo_query);
 		
 		$ermessage = check($results);
@@ -54,7 +54,7 @@
 			</tr>
 
 			<!-- PHP loop to display table results -->
-			<?php
+			<?php 
 				$int = 1;
 				$is_gray = "class=\"gray\"";
 				while ($row = mysql_fetch_array($results)){
@@ -65,7 +65,7 @@
 					}
 			?>
 			<tr <?=$is_gray ?>>
-				<td><?= $int ?></td>
+				<td><?= $row["school"] ?> - <?=$row["degree_type"]?> in <?=$row["degree_name"]?></td>
 				<td><?= $row["due_date"] ?></td>
 				<td><?= $row["fee"] ?></td>
 				<td><?= $row["recs"] ?></td>
@@ -74,7 +74,7 @@
 			</tr>
 			<?php
 				$int++;
-				}
+				}}
 			?>
 		</table>
 	</body>
