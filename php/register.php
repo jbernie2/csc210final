@@ -55,9 +55,14 @@
 		}
 		else{
 			echo "insert failed ";
+			$valid = false;
 		}
 	}
 	else{
 		echo "input invalid ";
+		$valid = false;
 	}
+
+	//login user after they create account
+	include "login.php";
 ?>

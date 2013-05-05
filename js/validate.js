@@ -10,6 +10,7 @@ $(document).ready(function(){
 		
 
 	$("#register").submit(function(){
+		alert("why hello there");
 		if(validateFirstName() && validateLastName() && validateEmail() && validateAge())
 			return true;
 		else

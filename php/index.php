@@ -8,9 +8,6 @@
 		<link rel="stylesheet" href="../css/ourStyle.css" type="text/css" />
 	</head>
 	<body>
-			<h1>HELLO WORLD!</h1>
-		<p>No stealing!</p>
-
 		<form name="login" action="login.php" method="post">
     			Email: <input type="text" name="email" />
     			Password: <input type="password" name="password" />
