@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 	// validating functions
 	function validateFirstName(){
+		alert("checking first name");
 		if(first_name.value.match(letters)){
 			return true;
 		}
