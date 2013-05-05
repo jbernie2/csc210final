@@ -1,5 +1,5 @@
 alert("js is hooked up!");
-
+/*
 $(document).ready(function(){
 	alert("All up in this bitch");
 	
@@ -56,4 +56,4 @@ $(document).ready(function(){
 		return String(n) === age && n >= 0;
 	}
 
-});
+});*/
