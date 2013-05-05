@@ -1,5 +1,7 @@
+alert("js is hooked up!");
+/*
 $(document).ready(function(){
-	
+	alert("All up in this bitch");
 	
 	// let's set up some variables
 	var first_name = $("#first_name");
@@ -23,6 +25,7 @@ $(document).ready(function(){
 
 	// validating functions
 	function validateFirstName(){
+		alert("checking first name");
 		if(first_name.value.match(letters)){
 			return true;
 		}
@@ -54,4 +57,4 @@ $(document).ready(function(){
 		return String(n) === age && n >= 0;
 	}
 
-});
+});*/
