@@ -16,7 +16,7 @@
 		
 		db_connect();
 		
-		$proginfo_query = "SELECT school, degree_type, degree_name, fee, recs, gre FROM proginfo ORDER
+		$proginfo_query = "SELECT school, degree_type, degree_name, fee, recs, gre FROM proginfo
 								WHERE school LIKE \"%". $school . 
 								"%\" AND degree_name =\"" . $degree .
 								"\" ORDER BY school ASC;";
