@@ -17,9 +17,9 @@
 		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
 		$degree = $_REQUEST["degree"];
 		$ermessage = 0;
-		/*
-		db_connect();
 		
+		db_connect();
+		/*
 		$proginfo_query = "SELECT school, degree_type, degree_name, fee, recs, gre FROM proginfo ORDER
 								WHERE school LIKE \"%". $school . 
 								"%\" AND degree_name =\"" . $degree .
