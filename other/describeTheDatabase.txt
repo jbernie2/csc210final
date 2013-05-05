@@ -37,8 +37,8 @@ school = same as program name
 
 link = http address of program's webpage
 
-degree_type = MS, MA, PhD etc.
+degree_type = MS, MA, PhD etc. (Must be in those forms or the search won't work)
 
-degree_name = chem,bio,comp, or phil
+degree_name = Chemistry,Biology,Philosophy,Computer Science  (Must be in those forms or the search won't work)
 
 

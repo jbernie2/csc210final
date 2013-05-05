@@ -16,7 +16,7 @@
 		
 		db_connect();
 		
-		$proginfo_query = "SELECT school, due_date, degree_type, degree_name, fee, recs, gre FROM proginfo
+		$proginfo_query = "SELECT school, link, due_date, degree_type, degree_name, fee, recs, gre FROM proginfo
 								WHERE school LIKE \"%". $school . 
 								"%\" AND degree_name LIKE \"%" . $degree .
 								"%\" ORDER BY school ASC;";
@@ -65,7 +65,7 @@
 					}
 			?>
 			<tr <?=$is_gray ?>>
-				<td><?= $row["school"] ?> - <?=$row["degree_type"]?> in <?=$row["degree_name"]?></td>
+				<td><a href="<?=$row["link"]?>"><?= $row["school"] ?> - <?=$row["degree_type"]?> in <?=$row["degree_name"]?></a></td>
 				<td><?= $row["due_date"] ?></td>
 				<td><?= $row["fee"] ?></td>
 				<td><?= $row["recs"] ?></td>
