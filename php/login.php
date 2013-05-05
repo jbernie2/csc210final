@@ -1,7 +1,10 @@
 <?php
 	session_start();
-	include 'db.php';	
+	include 'db.php';
 	db_connect();
+	
+	//returns the results of the login attempt to ajax
+	$login;
 
 	$email = mysql_real_escape_string($_POST['email']);
 	$password = mysql_real_escape_string($_POST['password']);
@@ -16,9 +19,12 @@
 		$user_info = mysql_fetch_array($validUser);
 		$_SESSION['first_name'] = $user_info[0];
 		$_SESSION['user_id'] = $user_info[1];
+		$login = "true";
 	}
+	//if user was not found
 	else{
-		
-		echo "login failed";
+		$login = "false";
 	}
+
+	echo json_encode($login);
 ?>
