@@ -8,7 +8,7 @@
 	</head>
 	
 	<?php
-		ini_set('display_errors', 1); 
+		ini_set('display_errors', '1'); 
 		error_reporting(E_ALL);
 
 		include 'db.php';
@@ -71,8 +71,8 @@
 				<td><?= $int ?></td>
 				<td><?= $row["due_date"] ?></td>
 				<td><?= $row["fee"] ?></td>
-				<td><?= $row["recs"]?></td>
-				<td><?= $row["gre"]?></td>
+				<td><?= $row["recs"] ?></td>
+				<td><?= $row["gre"] ?></td>
 				<td>addme button</td>
 			</tr>
 			<?php
