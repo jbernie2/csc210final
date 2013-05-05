@@ -1,3 +1,5 @@
+alert("js is hooked up!");
+
 $(document).ready(function(){
 	alert("All up in this bitch");
 	
