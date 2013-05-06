@@ -19,11 +19,11 @@
 			$_SESSION['user_id'] = $user_info[1];
 			$results = "true";
 		}
+
 		//if user was not found
 		else{
 			$results = "false";
 		}
-
 		return $results;
 	}
 ?>
