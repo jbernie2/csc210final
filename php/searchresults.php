@@ -4,6 +4,7 @@
 		<title>Search for a grad program with Grad to Go</title>
 		<link rel="stylesheet" type="text/css" href="../css/ourStyle.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../js/addProgram.js"></script>
 		
 	</head>
 	
@@ -13,10 +14,13 @@
 		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
 		$degree = $_REQUEST["degree"];
 		$ermessage = 0;
-		
+
+		//connect to databse
+		include_once 'db.php';
+		include_once 'addProgram.php';
 		db_connect();
 		
-		$proginfo_query = "SELECT school, link, due_date, degree_type, degree_name, fee, recs, gre FROM proginfo
+		$proginfo_query = "SELECT school, link, due_date, degree_type, degree_name, fee, recs, gre , program_id FROM proginfo
 								WHERE school LIKE \"%". $school . 
 								"%\" AND degree_name LIKE \"%" . $degree .
 								"%\" ORDER BY school ASC;";
@@ -70,7 +74,7 @@
 				<td><?php echo $row["fee"] ?></td>
 				<td><?php echo $row["recs"] ?></td>
 				<td><?php echo $row["gre"] ?></td>
-				<td>addme button</td>
+				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" id="<?php echo $row["program_id"] ?>"></td>
 			</tr> 
 			<?php
 				$int++;
