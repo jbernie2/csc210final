@@ -8,6 +8,7 @@ $(document).ready(function(){
 	});
 	
 	function addProgram(theID){
+		alert("wooo");
 		var values = $(theID).serialize();
 		$.ajax({
 			type: "POST",
