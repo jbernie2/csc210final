@@ -11,12 +11,12 @@ $(document).ready(function(){
 		var values = $(arg).serialize();
 		$.ajax({
 			type: "POST",
-			url: "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/ajaxLogin.php",
+			url: "/csc210final/php/ajaxLogin.php",
 			data: values,
 			success: function(results){
 				results = $.parseJSON(results);
 				if(results == "true"){
-					window.location = "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/homepage.php";
+					window.location = "/csc210final/php/homepage.php";
 				}
 				else{
 					$("#errorMessage").text("Username and password invalid, please try again");
