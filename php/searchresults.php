@@ -65,13 +65,13 @@
 					}
 			?>
 			<tr <?=$is_gray ?>>
-				<td><a href="<?=$row["link"]?>"><?= $row["school"] ?> - <?=$row["degree_type"]?> in <?=$row["degree_name"]?></a></td>
+				<td>One<?= $row["school"] ?>School -  <?=$row["degree_type"]?> in degree <?=$row["degree_name"]?></a></td>
 				<td><?= $row["due_date"] ?></td>
 				<td><?= $row["fee"] ?></td>
 				<td><?= $row["recs"] ?></td>
 				<td><?= $row["gre"] ?></td>
 				<td>addme button</td>
-			</tr>
+			</tr> 
 			<?php
 				$int++;
 				}}
