@@ -38,7 +38,7 @@
 		<?php
 			if ($ermessage == 1){
 		?>
-		<p>Sorry, we could not find any schools called <?=$school?>.</p>
+		<p>Sorry, we could not find any schools called <?php echo "$school"?>.</p>
 		<?php 
 			}else{
 		?>
@@ -64,12 +64,12 @@
 						$is_gray = null;
 					}
 			?>
-			<tr <?=$is_gray ?>>
-				<td>One<?= $row["school"] ?>School -  <?=$row["degree_type"]?> in degree <?=$row["degree_name"]?></a></td>
-				<td><?= $row["due_date"] ?></td>
-				<td><?= $row["fee"] ?></td>
-				<td><?= $row["recs"] ?></td>
-				<td><?= $row["gre"] ?></td>
+			<tr <?php $is_gray ?>>
+				<td><?php echo $row["school"] ?> -  <?php echo $row["degree_type"]?> in <?php echo $row["degree_name"]?></a></td>
+				<td><?php echo $row["due_date"] ?></td>
+				<td><?php echo $row["fee"] ?></td>
+				<td><?php echo $row["recs"] ?></td>
+				<td><?php echo $row["gre"] ?></td>
 				<td>addme button</td>
 			</tr> 
 			<?php
