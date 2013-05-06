@@ -11,14 +11,19 @@
 		
 	</head>
 	<body>
+		<div id="homepage">
+		<h2>Welcome to Grad to Go</h2>
 		<p> Login </p>
 		<span id="errorMessage"> </span>
 		<br/>
 		<form id="login" onsubmit="return false" method="POST">
-    		Email: <input type="text" name="email" />
-    		Password: <input type="password" name="password" />
+    		<input type="text" name="email" placeholder="E-mail"/>
+		<br />
+    		<input type="password" name="password" placeholder="Password"/>
+		<br />
     		<input type="submit" value="Login" />
 		</form>
 		<a href="html/register.html">Don't have an Account? Create one here!</a>
+		</div>
 	</body>
 </html>

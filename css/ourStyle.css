@@ -1,5 +1,21 @@
 body{
 	background: #DCE5FF;
+	padding-left: 5%;
+	padding-right: 5%
+}
+
+#homepage{
+	text-align: center;
+	width: 400px;
+	margin-top: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	border-style:solid;
+	border-color: black;
+}
+
+form{
+	text-align: left;
 }
 
 h1{
@@ -13,14 +29,6 @@ h1{
 	font-family: Vergana, sans-serif;
 }
 
-h2{
-	position:absolute;
-	right:0px;
-	top:20px;
-	color: #ccc;
-	font-size: 14pt;
-	font-weight: normal;
-}
 
 h3{
 	color: #333;
