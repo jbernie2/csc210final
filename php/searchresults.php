@@ -59,16 +59,9 @@
 
 			<!-- PHP loop to display table results -->
 			<?php 
-				$int = 1;
-				$is_gray = "class=\"gray\"";
 				while ($row = mysql_fetch_array($results)){
-					if($int%2 == 1){ 
-						$is_gray = "class=\"gray\"";
-					}else{
-						$is_gray = null;
-					}
 			?>
-			<tr <?php $is_gray ?>>
+			<tr >
 				<td><?php echo $row["school"] ?> -  <?php echo $row["degree_type"]?> in <?php echo $row["degree_name"]?></a></td>
 				<td><?php echo $row["due_date"] ?></td>
 				<td><?php echo $row["fee"] ?></td>
@@ -77,7 +70,6 @@
 				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" id="<?php echo $row["program_id"] ?>"></td>
 			</tr> 
 			<?php
-				$int++;
 				}}
 			?>
 		</table>

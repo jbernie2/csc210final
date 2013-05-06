@@ -58,10 +58,13 @@ table{
 	margin-left: auto;
 	margin-right: auto;
 	width:70%;
-	text-align:left;
+	text-align:center;
 }
 
-
+tr, th{
+	margin-left:auto;
+	margin-right:auto;
+}
 
 tr:nth-child(even){
   background-color: #eee;
