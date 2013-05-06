@@ -3,7 +3,7 @@ var programChoice;
 $(document).ready(function(){
 
 	$("img").click(function(){ 
-		//alert($(this).attr('id'));
+		alert($(this).attr('id'));
 		addProgram($(this).attr('id'));
 	});
 	
@@ -12,13 +12,13 @@ $(document).ready(function(){
 		var values = $(theID).serialize();
 		$.ajax({
 			type: "POST",
-			url: "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/addProgram.php",
+			url: "../php/addProgram.php",
 			data: values,
 			success: function(results){
+				alert(results);
 				results = $.parseJSON(results);
 				if(results == "true"){
-					window.location = "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/searchresults.php";
-					//alert("true!");
+					window.location = "../php/searchresults.php";
 				}
 				else{
 					$("#errorMessage").text("Username and password invalid, please try again");
@@ -27,5 +27,4 @@ $(document).ready(function(){
 			}
 		})
 	}
-	userLogin = login;
 })
