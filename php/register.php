@@ -7,15 +7,16 @@
 	error_reporting(E_ALL);
 
 	//connect to databse
-	include 'db.php';
+	include_once 'db.php';
+	include_once 'login.php';
 	db_connect();
 	
 	//parse and sanitize form input
 	$email = mysql_real_escape_string($_POST['email']);
 	$first_name = mysql_real_escape_string($_POST['first_name']);
 	$last_name = mysql_real_escape_string($_POST['last_name']);
-	$pass1 = mysql_real_escape_string($_POST['pass1']);
-	$pass2 = mysql_real_escape_string($_POST['pass2']);
+	$pass1 = mysql_real_escape_string($_POST['password']);
+	$pass2 = mysql_real_escape_string($_POST['password2']);
 
 	//will be true if inputted fields pass all tests
 	$valid = true;
@@ -23,13 +24,11 @@
 	//check to make sure passwords match
 	if($pass1 != $pass2){
 		$valid = false;
-   	 	header('Location: index.php');
 	}
 
 	//check for valid username
 	if(strlen($email) > 30){
 		$valid = false;
-    	header('Location: index.php');
 	}	
 
 	//check to see if that user name already exists
@@ -38,8 +37,6 @@
 
 	if(mysql_num_rows($uniqueUser) > 0){
 		$valid = false;
-		echo "user name taken";
-    	header('Location: index.php');
 	}
 
 	//create a user_id
@@ -51,18 +48,20 @@
 	if($valid){
 		if(mysql_query("INSERT INTO users (user_id, first_name, last_name, password, email)
 					VALUES ('$user_id','$first_name','$last_name','$pass1','$email')")){
-			echo "insert successful ";	
+			;//do nothing
 		}
 		else{
-			echo "insert failed ";
 			$valid = false;
 		}
 	}
 	else{
-		echo "input invalid ";
 		$valid = false;
 	}
-
-	//login user after they create account
-	include "login.php";
+	
+	if($valid){
+		login($email,$pass1);
+		echo json_encode("true");
+	}else{
+		echo json_encode("false");
+	}
 ?>

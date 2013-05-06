@@ -1,11 +1,17 @@
+
+var userLogin;
+
 $(document).ready(function(){
 
 	$("#login").submit(function(){ 
+		login("#login");
+	});
 	
-		var values = $("input").serialize();
+	function login(arg){
+		var values = $(arg).serialize();
 		$.ajax({
 			type: "POST",
-			url: "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/login.php",
+			url: "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/ajaxLogin.php",
 			data: values,
 			success: function(results){
 				results = $.parseJSON(results);
@@ -17,5 +23,6 @@ $(document).ready(function(){
 				}
 			}
 		})
-	});
+	}
+	userLogin = login;
 })
