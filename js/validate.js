@@ -1,6 +1,7 @@
-$(document).ready(function(){		
+$(document).ready(function(){
 
 	$("#register").submit(function(){
+
 
 	var first_name = document.getElementById("first_name").value;
 	var last_name = document.getElementById("last_name").value;
@@ -9,7 +10,8 @@ $(document).ready(function(){
 
 		if(validateFirstName() && validateLastName() && validateEmail() && validateAge()){
 			alert("The data checks out. Welcome!");
-			return true;
+			userRegister();
+			return false;
 		}
 		else{
 			alert("Your data was the derps. Not added. Try again.");
@@ -53,9 +55,9 @@ $(document).ready(function(){
 		if(!isNaN(age.value)){
 			return true;
 		}
+		else{
 			return false;
 		}
 	}
-
 
 });
