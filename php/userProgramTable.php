@@ -94,7 +94,7 @@
 			$table .= "<td>".makeEditable($schoolID,'transcript_sent',$row['transcript_sent'],'select')."</td>";
 			$table .= "<td>".$row['recs']."</td>";
 			$table .= "<td>".makeEditable($schoolID,'recommendations_sent',$row['recommendations_sent'],'number')."</td>";
-			$table .= "<td> <input type='checkbox' name='remove' value='".$schoolID."'> remove <br></td>";
+			$table .= "<td> <input type='checkbox' name='".$schoolID."_remove' value='".$schoolID."'> remove <br></td>";
 			$table .= "</tr>\n";
 		}
 		$table .= "</table>";
