@@ -4,6 +4,7 @@ var userLogin;
 $(document).ready(function(){
 
 	$("#login").submit(function(){ 
+		alert("logging in");
 		login("#login");
 	});
 	
@@ -16,7 +17,7 @@ $(document).ready(function(){
 			success: function(results){
 				results = $.parseJSON(results);
 				if(results == "true"){
-					window.location = "/csc210final/php/homepage.php";
+					window.location = "/csc210final/php/index.php";
 				}
 				else{
 					$("#errorMessage").text("Username and password invalid, please try again");
