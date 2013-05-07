@@ -2,7 +2,7 @@
 
 	<a href="../php/"><img src="../img/logo.png" alt="grad2go" height="75" /></a>
 	<div id="buttonArea">
-		<form id="button" action="../html/search.html">
+		<form id="button" action="../php/search.php">
     			<input type="submit" id="more" value="Click here to search for more grad programs">
 		</form>
 	</div>
