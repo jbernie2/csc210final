@@ -70,7 +70,7 @@
 		}
 		$table .= "</table>";
 	
-		$table .= "<input type='submit' value='Submit Changes'/>";
+		$table .= "<div id='inputButton'><input type='submit' id='inputButton' value='Submit Changes'/></div>";
 		$table .= "</form>";
 		
 		echo $table;
