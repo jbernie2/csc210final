@@ -28,6 +28,9 @@
 
 				where
 					(pl.user_id = '$user_id')
+
+				order by
+					pi.program_name ASC
 		");
 		
 		if (!$result) {
