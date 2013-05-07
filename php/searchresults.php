@@ -17,7 +17,6 @@
 
 		//connect to databse
 		include_once 'db.php';
-		include_once 'addProgram.php';
 		db_connect();
 		
 		$proginfo_query = "SELECT school, link, due_date, degree_type, degree_name, fee, recs, gre , program_id FROM proginfo
@@ -67,7 +66,7 @@
 				<td><?php echo $row["fee"] ?></td>
 				<td><?php echo $row["recs"] ?></td>
 				<td><?php echo $row["gre"] ?></td>
-				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" id="<?php echo $row["program_id"] ?>"></td>
+				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" class="add" id="<?php echo $row["program_id"] ?>"></td>
 			</tr> 
 			<?php
 				}}

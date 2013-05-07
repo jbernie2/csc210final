@@ -1,6 +1,76 @@
 body{
 	background: #DCE5FF;
+	padding-top: 0px;
 }
+
+#homepage{
+	text-align: center;
+	width: 400px;
+	margin-top: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	border-style:solid;
+	border-color: black;
+	border-width: 1px;
+	background-color: #EEF2FF;
+}
+
+form{
+	text-align: left;
+	height: 10px;
+}
+
+
+input#more{
+	width:300px;
+	height:40px;
+	float: right;
+}
+
+form#search{
+	margin-right:auto; 
+	margin-left:auto;
+	width:300px;
+	position: relative;
+}
+
+div#button{
+	position: absolute;
+	top:300px;
+}
+
+#errorMessage{
+	color: red;
+}
+
+#banner{
+	border-style: solid;
+	border-width: 1px;
+	height: 75px;
+	min-width: 850px;
+	background-color: #fff;
+}
+
+#banner img{
+	clear: none;
+}
+#search{
+	position:absolute;
+	top:90px;
+	right:8px;
+       width: 200px;
+	height: 60px;
+	clear: none;
+}
+
+#banner_float{
+	position:absolute;
+	right:0px;
+	top:15px;
+	width: 400px;
+	clear: none;
+}
+
 
 h1{
 	position:absolute;
@@ -13,45 +83,21 @@ h1{
 	font-family: Vergana, sans-serif;
 }
 
-h2{
-	position:absolute;
-	right:0px;
-	top:20px;
-	color: #ccc;
-	font-size: 14pt;
-	font-weight: normal;
-}
 
-h3{
+h2{
 	color: #333;
 	font-family: Verdana, sans-serif;
-	font-size: 20pt;
+	font-size: 18pt;
+	font-weight: normal;
 	margin-left: auto;
 	margin-right: auto;
-	width:70%;
-	margin-bottom: 0;
 }
 
-div#theHeader{
-	font-family: Verdana, sans-serif;	
-}
-
-div#centerBit{
-	position:absolute;
-	width:100%;
-	top: 100px;
-}
 
 div#savedPrograms{
 	text-align:center;
 }
 
-div#buttonArea{
-	margin-left: auto;
-	margin-right: auto;
-	width:70%;
-	text-align:right;
-}
 
 table{
 	border-collapse:collapse;

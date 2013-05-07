@@ -2,30 +2,30 @@ var programChoice;
 
 $(document).ready(function(){
 
-	$("img").click(function(){ 
-		//alert($(this).attr('id'));
+	$(".add").click(function(){ 
 		addProgram($(this).attr('id'));
 	});
 	
 	function addProgram(theID){
-		alert("wooo");
-		var values = $(theID).serialize();
+		var values = theID; //$(theID).serialize();
 		$.ajax({
 			type: "POST",
-			url: "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/addProgram.php",
-			data: values,
+			url: "../php/addProgram.php",
+			data: { id: values},
 			success: function(results){
+				alert(results);
 				results = $.parseJSON(results);
-				if(results == "true"){
-					window.location = "http://ec2-184-72-196-134.compute-1.amazonaws.com/csc210final/php/searchresults.php";
-					//alert("true!");
+				if(results){
+					window.location = "../php/searchresults.php";
 				}
 				else{
-					$("#errorMessage").text("Username and password invalid, please try again");
-					//alert("false!");
+				
 				}
 			}
 		})
 	}
-	userLogin = login;
+	
+	function checkLogin(){
+		
+	}
 })
