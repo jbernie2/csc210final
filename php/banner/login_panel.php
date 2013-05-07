@@ -5,7 +5,7 @@
                         <input type="text" name="email" placeholder="E-mail"/>
                         <input type="password" name="password" placeholder="Password"/>
                         <input type="submit" value="Login" />
-                        <a href="../html/register.html">Register an account</a>
+                        <a href="../php/userRegister.php">Register an account</a>
 			</form>
         </div>
 

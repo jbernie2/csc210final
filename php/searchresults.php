@@ -57,7 +57,7 @@
 		<?php 
 			if($logged_in != "true"){
 		?>
-		<p>Please login or <a href="../html/register.html">register an account</a> to add programs to your list</p>
+		<p>Please login or <a href="../php/userRegister.php">register an account</a> to add programs to your list</p>
 		<?php } ?>
 		<table>
 			<tr>

@@ -75,7 +75,10 @@ input#more{
 	position: relative;
 	top: -6px;
 }
-
+#errorRegister{
+	background-color: #FF7474;
+	font-family: sans-serif;
+}
 input#submitChanges{
 	float: right;
 }
