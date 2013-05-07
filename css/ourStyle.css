@@ -74,10 +74,7 @@ input#more{
 	float: right;
 	position: relative;
 }
-#errorRegister{
-	background-color: #FF7474;
-	font-family: sans-serif;
-}
+
 input#submitChanges{
 	float: right;
 }
@@ -103,11 +100,18 @@ div#inputButton{
 div#logout{
 	position: absolute;
 	top: 50px;
-	right: 50px;
+	right: 15px;
 }
 
 div#savedPrograms{
 	text-align:center;
+}
+
+div#username{
+	text-align: right;
+	position: absolute;
+	top: 50px;
+	right: 80px;
 }
 
 div#userPrograms{
@@ -183,9 +187,3 @@ input#inputButton{
 	font-size: 14pt;
 }
 
-#response{
-	font-family:sans-serif;
-	clear:both;
-	text-align:center;
-	background-color:#A3FFA3;
-}
