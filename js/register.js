@@ -14,7 +14,7 @@ $(document).ready(function(){
 					window.location = "/csc210final/php/index.php";
 				}
 				else{
-					$("#errorMessage").text("That email address already has an account, please try again");
+					$("#errorRegister").text("That email address already has an account, please try again");
 				}
 			}
 		})
