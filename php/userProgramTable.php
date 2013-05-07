@@ -1,26 +1,23 @@
 <?php
-	//display php errors on page
-	ini_set('display_errors', 1); 
-	error_reporting(E_ALL);
 	
-	//get session variables
-	if(!isset($_SESSION)) {
-     	session_start();
-	}
-	
-	//connect to database
-	include_once "db.php";
-	db_connect();
-
-	$first_name = $_SESSION['first_name'];
-	$user_id = $_SESSION['user_id'];
-
-	echo $first_name;
-	echo $user_id;
-
-	//retreive programs that the use has applied to
-	//and display them in a table
 	function getPrograms(){
+		//display php errors on page
+		ini_set('display_errors', 1); 
+		error_reporting(E_ALL);
+
+		//get session variables
+		if(!isset($_SESSION)) {
+		session_start();
+		}
+
+		//connect to database
+		include_once "db.php";
+		db_connect();
+
+		formatTable(getUserPrograms());
+	}
+	//retreive programs that the use has applied to
+	function getUserPrograms(){
 
 		$user_id = $_SESSION['user_id'];
 		$result = mysql_query("
@@ -36,7 +33,12 @@
 		if (!$result) {
 			die("Query to show fields from table failed");
 		}
-
+	
+		return $result;
+	}
+	
+	//display mysql results in a table
+	function formatTable($result){
 		//column titles
 		$table = "<div id='userPrograms'><form id='user_programs' onsubmit='return false;'>";
 		$table .= "<table border='0'>";

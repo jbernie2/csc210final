@@ -9,7 +9,9 @@
 
 	<div id="banner_float">
 	<?php
-	session_start();
+	if(!isset($_SESSION)) {
+     	session_start();
+	}
 	if(isset($_SESSION['first_name'])){
 		include_once('../php/banner/user_panel.php');
 	}else{
