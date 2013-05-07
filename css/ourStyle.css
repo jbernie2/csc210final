@@ -2,7 +2,10 @@ body{
 	background: #DCE5FF;
 	padding-top: 0px;
 }
-
+#searchHead{
+	clear: both;
+	text-align: center;
+}
 #homepage{
 	text-align: center;
 	width: 400px;
@@ -60,13 +63,6 @@ input#inputButton{
 	float: right;
 }
 
-form#search{
-	margin-right:auto; 
-	margin-left:auto;
-	width:300px;
-	position: relative;
-}
-
 div#button{
 	position: absolute;
 	top:300px;
@@ -88,12 +84,15 @@ div#button{
 	clear: none;
 }
 #search{
-	position:absolute;
-	top:90px;
+	margin-right:auto; 
+	margin-left:auto;
+	position: relative;
 	right:8px;
-       width: 200px;
+	top: 30px;
 	height: 60px;
 	clear: none;
+	width: 300px;
+	
 }
 
 #banner_float{

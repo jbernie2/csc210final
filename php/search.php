@@ -4,11 +4,12 @@
 		<title>Search for a grad program with Grad to Go</title>
 		<link rel="stylesheet" type="text/css" href="../css/ourStyle.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		
+		<script src="../js/login.js"></script>
 	</head>
 	
 	<body>
 		<?php include "../php/banner/banner.php"; ?>
+		<h2 id="searchHead">Search for a graduate program</h2>
 		<div id="searchArea">
 			<form id="search" action="../php/searchresults.php">
 				Search for a school: <input name="school" />

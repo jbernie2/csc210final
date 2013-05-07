@@ -33,12 +33,37 @@
 		if (!$result) {
 			die("Query to show fields from table failed");
 		}
-	
+		if (mysql_num_rows($result) == 0){
+			$result = "false";
+		}
 		return $result;
 	}
 	
 	//display mysql results in a table
 	function formatTable($result){
+		if($result == "false"){
+			$table =  "
+			<h2 id = \"searchHead\">
+				It looks like you haven't selected any schools yet.
+				Try searching for some now.
+			</h2>
+			<div id=\"searchArea\">
+                        <form id=\"search\" action=\"../php/searchresults.php\">
+                                Search for a school: <input name=\"school\" />
+                                Pick a program:
+                                <select name=\"degree\" size=\"1\">
+                                        <option></option>
+                                        <option>Biology</option>
+                                        <option>Chemistry</option>
+                                        <option>Computer Science</option>
+                                        <option>Philosophy</option>
+                                </select>
+                        <input type=\"submit\" value=\"Search\"/>
+                        </form>
+                </div>";
+			
+			echo $table;
+		}else{
 		//column titles
 		$table = "<div id='userPrograms'><form id='user_programs' onsubmit='return false;'>";
 		$table .= "<table border='0'>";
@@ -78,6 +103,7 @@
 		$table .= "</form></div>";
 		
 		echo $table;
+		}
 	}
 
 	//make fields in the table user editable

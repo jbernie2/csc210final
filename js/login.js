@@ -4,7 +4,6 @@ var userLogin;
 $(document).ready(function(){
 
 	$("#login").submit(function(){ 
-		alert("logging in");
 		login("#login");
 	});
 	

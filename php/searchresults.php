@@ -49,7 +49,7 @@
 		<?php
 			if ($ermessage == 1){
 		?>
-		<p>Sorry, we could not find any schools that matched your search.</p>
+		<p>Sorry, we could not find any schools that matched your search. <a href="search.php">Try a new query</a></p>
 		<?php 
 			}else{
 		?>
