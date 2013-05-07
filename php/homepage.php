@@ -38,7 +38,7 @@
 
 		//column titles
 		$table = "<form id='user_programs' onsubmit='return false;'>";
-		$table .= "<table border='1'>";
+		$table .= "<table>";
 		$table .= "<tr>";
 		$table .= "<th> Program Name </th>";
 		$table .= "<th> Due Date </th>";
@@ -48,7 +48,7 @@
 		$table .= "<th> Transcript Sent? </th>";
 		$table .=  "<th> Recommendations Required </th>";
 		$table .= "<th> Recommendations Sent </th>";
-		$table .= "<tr/>";
+		$table .= "</tr>";
 
 		// printing table rows
 		while($row = mysql_fetch_assoc($result)){
