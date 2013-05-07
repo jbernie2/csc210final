@@ -17,7 +17,6 @@
 
 		//connect to databse
 		include_once 'db.php';
-		include_once 'addProgram.php';
 		db_connect();
 		
 		$proginfo_query = "SELECT school, link, due_date, degree_type, degree_name, fee, recs, gre , program_id FROM proginfo
