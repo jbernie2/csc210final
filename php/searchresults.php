@@ -53,7 +53,7 @@
 		<?php 
 			}else{
 		?>
-		<p>Here are some programs we found that match your search</p>
+		<p>Here are some programs we found that match your search:</p>
 		<table>
 			<tr>
 				<th>Program</th>
