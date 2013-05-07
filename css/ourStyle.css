@@ -1,7 +1,6 @@
 body{
 	background: #DCE5FF;
-	padding-left: 5%;
-	padding-right: 5%
+	padding-top: 0px;
 }
 
 #homepage{
@@ -16,7 +15,34 @@ body{
 
 form{
 	text-align: left;
+	height: 10px;
 }
+
+#errorMessage{
+	color: red;
+}
+
+#banner{
+	border-style: solid;
+	height: 75px;
+	min-width: 850px;
+}
+
+#banner img{
+	width: 150px;
+	clear: none;
+}
+#search{
+        width: 300px;
+	clear: none;
+}
+
+#banner_float{
+	float: right;
+	width: 400px;
+	clear: none;
+}
+
 
 h1{
 	position:absolute;
