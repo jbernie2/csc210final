@@ -25,10 +25,12 @@ form{
 	height: 10px;
 }
 
-input#more{
+#more{
 	width:300px;
 	height:40px;
 	float: right;
+	position: relative;
+	top: -6px;
 }
 
 input#submitChanges{

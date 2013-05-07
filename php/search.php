@@ -8,7 +8,10 @@
 	</head>
 	
 	<body>
-		<?php include "../php/banner/banner.php"; ?>
+		<?php 
+		//include "../php/banner/banner.php"; 
+		include_once('../php/banner/banner.php');
+		?>
 		<h2 id="searchHead">Search for a graduate program</h2>
 		<div id="searchArea">
 			<form id="search" action="../php/searchresults.php">
