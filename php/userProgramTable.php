@@ -19,7 +19,7 @@
 	//retreive programs that the use has applied to
 	function getUserPrograms(){
 
-		$user_id = $_SESSION['user_id'];
+		$user_id = mysql_real_escape_string($_SESSION['user_id']);
 		$result = mysql_query("
 			select * from proglookup pl
 

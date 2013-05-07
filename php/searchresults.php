@@ -46,14 +46,19 @@
 	?>
 	<body>
 		<?php include('banner/banner.php')?>
-		<?php
+		<?php 
 			if ($ermessage == 1){
 		?>
-		<p>Sorry, we could not find any schools that matched your search. <a href="search.php">Try a new query</a></p>
+		<p class="searchResult">Sorry, we could not find any schools that matched your search. <a href="search.php">Try a new query</a></p>
 		<?php 
 			}else{
 		?>
-		<p>Here are some programs we found that match your search:</p>
+		<p class="searchResult">Here are some programs we found that match your search:</p>
+		<?php 
+			if($logged_in != "true"){
+		?>
+		<p>Please login or <a href="../html/register.html">register an account</a> to add programs to your list</p>
+		<?php } ?>
 		<table>
 			<tr>
 				<th>Program</th>
@@ -61,7 +66,11 @@
 				<th>Fee</th>
 				<th>Recommenders</th>
 				<th>GRE</th>
+				<?php 
+					if($logged_in == "true"){
+				?>
 				<th>Add to list</th>
+				<?php } ?>
 			</tr>
 
 			<!-- PHP loop to display table results -->
@@ -81,7 +90,9 @@
 				<td><?php echo $row["fee"] ?></td>
 				<td><?php echo $row["recs"] ?></td>
 				<td><?php echo $row["gre"] ?></td>
+				<?php if($logged_in == "true"){ ?>
 				<td><img src="<?php echo $src ?>" width="18" height="18"  alt="click to add this program" class="add" id="<?php echo $row["program_id"] ?>"></td>
+				<?php } ?>
 			</tr> 
 			<?php
 				}}

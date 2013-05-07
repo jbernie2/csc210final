@@ -17,7 +17,9 @@ body{
 	border-width: 1px;
 	background-color: #EEF2FF;
 }
-
+p{
+	text-align: center;
+}
 form{
 	text-align: left;
 	height: 10px;
@@ -93,6 +95,11 @@ div#button{
 	clear: none;
 	width: 300px;
 	
+}
+.searchResult{
+	clear: both;
+	text-align: center;
+	font-size: 14pt;
 }
 
 #banner_float{

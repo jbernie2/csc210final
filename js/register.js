@@ -3,7 +3,6 @@ var userRegister;
 $(document).ready(function(){
 	
 	function register(){
-		alert("registering");
 		var values = $("#register").serialize();
 		$.ajax({
 			type: "POST",
