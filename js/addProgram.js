@@ -1,12 +1,12 @@
-var programChoice;
-
 $(document).ready(function(){
 
 	$(".add").click(function(){ 
-		addProgram($(this).attr('id'));
+		
+		addProgram($(this).attr('id'), this);
+	
 	});
 	
-	function addProgram(theID){
+	function addProgram(theID, reference){
 		var values = theID; //$(theID).serialize();
 		$.ajax({
 			type: "POST",
@@ -15,11 +15,10 @@ $(document).ready(function(){
 			success: function(results){
 				alert(results);
 				results = $.parseJSON(results);
-				if(results){
-					window.location = "../php/searchresults.php";
+				if(results == true){
+					$(reference).attr('src',  "null");
 				}
 				else{
-				
 				}
 			}
 		})
