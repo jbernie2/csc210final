@@ -18,5 +18,13 @@
 			die("Can not access DB: " . mysql_error()); 
 		}
 	}
+	function check($result){
+                                if (mysql_num_rows($result) == 0){
+                                        return 1;
+                                }else{
+                                        return 0;
+                                }
+        }
+
 ?>
 

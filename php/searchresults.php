@@ -5,15 +5,17 @@
 		<link rel="stylesheet" type="text/css" href="../css/ourStyle.css" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script src="../js/addProgram.js"></script>
+		<script src="../js/login.js"></script>
 		
 	</head>
 	
 	<?php
 		include 'db.php';
-		
+		session_start();
 		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
-		$degree = $_REQUEST["degree"];
+		$degree = mysql_real_escape_string($_REQUEST["degree"]);
 		$ermessage = 0;
+		$user_id = mysql_real_escape_string($_SESSION['user_id']);
 
 		//connect to databse
 		include_once 'db.php';
@@ -26,18 +28,20 @@
 		$results = mysql_query($proginfo_query);
 		
 		$ermessage = check($results);
-		//checks to make sure results were returned
-		function check($result){
-				if (mysql_num_rows($result) == 0){
-					return 1;
-				}else{
-					return 0;
-				}
-			}
+
+		//collect all of the schools the user has added
+		$program_query = "SELECT program_id FROM proglookup WHERE user_id=". $user_id . ";";
+		$program_column = mysql_query($program_query);
+		$user_programs = array();
+		//put it in a 1-D array
+		while($progId = mysql_fetch_array($program_column)){
+			$user_programs[] = $progId[0];
+		}
 
 	?>
 	<body>
-	
+		<?php include('banner/banner.php')?>
+		</p><?php echo $program_query ?>
 		<?php
 			if ($ermessage == 1){
 		?>
@@ -58,7 +62,13 @@
 
 			<!-- PHP loop to display table results -->
 			<?php 
+
 				while ($row = mysql_fetch_array($results)){
+					if(in_array($row["program_id"], $user_programs)){
+						$src = "../img/checkSign.png";
+					}else{
+						$src = "../img/addSign.png";
+					}
 			?>
 			<tr >
 				<td><?php echo $row["school"] ?> -  <?php echo $row["degree_type"]?> in <?php echo $row["degree_name"]?></a></td>
@@ -66,7 +76,7 @@
 				<td><?php echo $row["fee"] ?></td>
 				<td><?php echo $row["recs"] ?></td>
 				<td><?php echo $row["gre"] ?></td>
-				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" class="add" id="<?php echo $row["program_id"] ?>"></td>
+				<td><img src="<?php echo $src ?>" width="18" height="18"  alt="click to add this program" class="add" id="<?php echo $row["program_id"] ?>"></td>
 			</tr> 
 			<?php
 				}}
