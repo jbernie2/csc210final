@@ -1,16 +1,16 @@
 <?php
-	function addProgram(){
 		session_start();
 		include_once 'db.php';
 		db_connect();
+		$user_id = null;
+		$program_id = null;		
 
-		$user_id = mysql_real_escape_string($_SESSION['user_id']);
-		$program_id = mysql_real_escape_string($_POST['theID']);
+		if(isset($_SESSION['user_id'])){$user_id = mysql_real_escape_string($_SESSION['user_id']);}
+		
+		if(isset($_POST['id'])){$program_id = mysql_real_escape_string($_POST['id']);}
 
-		mysql_query("INSERT INTO proglookup (user_id, program_id) VALUES ($user_id, $program_id)");	
+		$add_query = "INSERT INTO proglookup (user_id, program_id) VALUES (" . $user_id . ", " . $program_id . ");";
 
-		echo json.encode("true");	
-
-	}
-
+		$result = mysql_query($add_query);	
+		echo json_encode($result);
 ?>
