@@ -15,6 +15,7 @@ $(document).ready(function(){
 					for(var i = 0; i< results.length; i++){
 						$('#tr'+results[i]).remove();
 					}
+					$("#response").text("updates successful");
 				}
 			}
 		})
