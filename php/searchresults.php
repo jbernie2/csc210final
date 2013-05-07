@@ -11,7 +11,7 @@
 	
 	<?php
 		include 'db.php';
-		session_start();
+		if(!isset($_SESSION)){session_start();}
 		$school = htmlspecialchars(mysql_real_escape_string($_REQUEST["school"]));
 		$degree = mysql_real_escape_string($_REQUEST["degree"]);
 		$ermessage = 0;
@@ -30,18 +30,22 @@
 		$ermessage = check($results);
 
 		//collect all of the schools the user has added
-		$program_query = "SELECT program_id FROM proglookup WHERE user_id=". $user_id . ";";
-		$program_column = mysql_query($program_query);
-		$user_programs = array();
-		//put it in a 1-D array
-		while($progId = mysql_fetch_array($program_column)){
-			$user_programs[] = $progId[0];
+		if($user_id == ""){
+			$logged_in = false;
+		}else{
+			$program_query = "SELECT program_id FROM proglookup WHERE user_id=". $user_id . ";";
+			$program_column = mysql_query($program_query);
+			$user_programs = array();
+			//put it in a 1-D array
+			while($progId = mysql_fetch_array($program_column)){
+				$user_programs[] = $progId[0];
+			}
+			$logged_in = true;
 		}
 
 	?>
 	<body>
 		<?php include('banner/banner.php')?>
-		</p><?php echo $program_query ?>
 		<?php
 			if ($ermessage == 1){
 		?>
@@ -62,13 +66,14 @@
 
 			<!-- PHP loop to display table results -->
 			<?php 
-
 				while ($row = mysql_fetch_array($results)){
-					if(in_array($row["program_id"], $user_programs)){
+					if($logged_in == "true"){
+					if(in_array($row["program_id"], $user_programs) ){
 						$src = "../img/checkSign.png";
 					}else{
 						$src = "../img/addSign.png";
 					}
+					}else{ $src = "../img/addSign.png";}
 			?>
 			<tr >
 				<td><?php echo $row["school"] ?> -  <?php echo $row["degree_type"]?> in <?php echo $row["degree_name"]?></a></td>
