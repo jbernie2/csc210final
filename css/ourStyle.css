@@ -33,12 +33,18 @@ form{
 	clear: none;
 }
 #search{
-        width: 300px;
+	width:400px;
+	position:absolute;
+	right:10px;
+	top:80px;
+       width: 300px;
 	clear: none;
 }
 
 #banner_float{
-	float: right;
+	position:absolute;
+	right:0px;
+	top:20px;
 	width: 400px;
 	clear: none;
 }
