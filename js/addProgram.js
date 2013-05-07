@@ -13,10 +13,9 @@ $(document).ready(function(){
 			url: "../php/addProgram.php",
 			data: { id: values},
 			success: function(results){
-				alert(results);
 				results = $.parseJSON(results);
 				if(results == true){
-					$(reference).attr('src',  "null");
+					$(reference).attr('src',  "../img/checkSign.png");
 				}
 				else{
 				}
