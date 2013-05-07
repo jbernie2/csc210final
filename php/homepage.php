@@ -4,8 +4,10 @@
 	error_reporting(E_ALL);
 	
 	//get session variables
-	session_start();
-	
+	if(!isset($_SESSION)) {
+     	session_start();
+	}
+
 	//connect to database
 	include_once "db.php";
 	db_connect();
