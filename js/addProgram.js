@@ -2,8 +2,9 @@ var programChoice;
 
 $(document).ready(function(){
 
-	$("img").click(function(){ 
-		alert($(this).attr('id'));
+	$(".add").click(function(){ 
+		
+		
 		addProgram($(this).attr('id'));
 	});
 	
@@ -27,4 +28,9 @@ $(document).ready(function(){
 			}
 		})
 	}
+	
+	function checkLogin(){
+		
+	}
+	userLogin = login;
 })
