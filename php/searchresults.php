@@ -67,7 +67,7 @@
 				<td><?php echo $row["fee"] ?></td>
 				<td><?php echo $row["recs"] ?></td>
 				<td><?php echo $row["gre"] ?></td>
-				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" id="<?php echo $row["program_id"] ?>"></td>
+				<td><img src="../img/addSign.png" width="18" height="18"  alt="click to add this program" class="add" id="<?php echo $row["program_id"] ?>"></td>
 			</tr> 
 			<?php
 				}}
