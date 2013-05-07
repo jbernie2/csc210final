@@ -12,7 +12,9 @@ $(document).ready(function(){
 					$("#response").text("updates successful");
 				}
 				else{
-					$("#response").text("updates failed");
+					for(var i = 0; i< results.length; i++){
+						$('#tr'+results[i]).remove();
+					}
 				}
 			}
 		})

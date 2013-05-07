@@ -1,6 +1,6 @@
 <div id="banner">
 
-	<img src="../img/logo.png" alt="grad2go" height="75" /> 
+	<a href="../php/"><img src="../img/logo.png" alt="grad2go" height="75" /></a>
 	<div id="buttonArea">
 		<form id="button" action="../html/search.html">
     			<input type="submit" id="more" value="Click here to search for more grad programs">

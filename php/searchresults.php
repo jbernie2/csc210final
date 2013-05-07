@@ -49,11 +49,11 @@
 		<?php
 			if ($ermessage == 1){
 		?>
-		<p>Sorry, we could not find any schools called <?php echo "$school"?>.</p>
+		<p>Sorry, we could not find any schools that matched your search.</p>
 		<?php 
 			}else{
 		?>
-		<p>Here are some programs we found that match your search</p>
+		<p>Here are some programs we found that match your search:</p>
 		<table>
 			<tr>
 				<th>Program</th>
