@@ -21,7 +21,7 @@
 					<option></option>
 					<option>Biology</option>
 					<option>Chemistry</option>
-					<option>Computer Science</option>
+					<option value='Computer S'>Computer Science</option>
 					<option>Philosophy</option>
 				</select>
     			<input type="submit" value="Search"/>

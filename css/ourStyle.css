@@ -186,4 +186,13 @@ input#inputButton{
 	text-align: center;
 	font-size: 14pt;
 }
-
+#response{
+	font-family:sans-serif;
+	clear:both;
+	text-align:center;
+	background-color:#A3FFA3;
+} 
+#errorRegister{
+	background-color: #FF7474;
+	font-family: sans-serif;
+} 
