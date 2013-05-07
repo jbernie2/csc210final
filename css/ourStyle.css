@@ -2,113 +2,6 @@ body{
 	background: #DCE5FF;
 	padding-top: 0px;
 }
-#searchHead{
-	clear: both;
-	text-align: center;
-}
-#homepage{
-	text-align: center;
-	width: 400px;
-	margin-top: 4%;
-	margin-left: auto;
-	margin-right: auto;
-	border-style:solid;
-	border-color: black;
-	border-width: 1px;
-	background-color: #EEF2FF;
-}
-p{
-	text-align: center;
-}
-form{
-	text-align: left;
-	height: 10px;
-}
-
-input#more{
-	width:300px;
-	height:40px;
-	float: right;
-}
-
-input#submitChanges{
-	float: right;
-}
-
-div#inputButton{
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-}
-
-div#holdButton{
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-}
-
-div#logout{
-	position: absolute;
-	top: 50px;
-	right: 50px;
-}
-
-div#userPrograms{
-	position: absolute;
-	top: 200px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-
-input#inputButton{
-	float: right;
-}
-
-div#button{
-	position: absolute;
-	top:300px;
-}
-
-#errorMessage{
-	color: red;
-}
-
-#banner{
-	border-style: solid;
-	border-width: 1px;
-	height: 75px;
-	min-width: 850px;
-	background-color: #fff;
-}
-
-#banner img{
-	clear: none;
-}
-#search{
-	margin-right:auto; 
-	margin-left:auto;
-	position: relative;
-	right:8px;
-	top: 30px;
-	height: 60px;
-	clear: none;
-	width: 300px;
-	
-}
-.searchResult{
-	clear: both;
-	text-align: center;
-	font-size: 14pt;
-}
-
-#banner_float{
-	position:absolute;
-	right:0px;
-	top:15px;
-	width: 400px;
-	clear: none;
-}
 
 
 h1{
@@ -133,8 +26,8 @@ h2{
 }
 
 
-div#savedPrograms{
-	text-align:center;
+p{
+	text-align: center;
 }
 
 
@@ -161,3 +54,132 @@ tr:nth-child(even){
 tr:nth-child(odd){
   background-color: white;
 }
+
+a#register{
+	position:absolute;
+	top: 50px;
+}
+
+form{
+	text-align: left;
+	height: 10px;
+}
+
+form#register{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	width: 70%;
+}
+
+input#more{
+	width:300px;
+	height:40px;
+	float: right;
+}
+
+input#submitChanges{
+	float: right;
+}
+
+div#button{
+	position: absolute;
+	top:300px;
+}
+
+div#holdButton{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+div#inputButton{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+
+div#logout{
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+div#savedPrograms{
+	text-align:center;
+}
+
+div#userPrograms{
+	position: absolute;
+	top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+input#inputButton{
+	float: right;
+}
+
+
+#banner{
+	border-style: solid;
+	border-width: 1px;
+	height: 75px;
+	min-width: 850px;
+	background-color: #fff;
+}
+
+#banner img{
+	clear: none;
+}
+
+#errorMessage{
+	color: red;
+}
+
+#search{
+	margin-right:auto; 
+	margin-left:auto;
+	position: relative;
+	right:8px;
+	top: 30px;
+	height: 60px;
+	clear: none;
+	width: 300px;
+	
+}
+
+#banner_float{
+	position:absolute;
+	right:0px;
+	top:15px;
+	width: 400px;
+	clear: none;
+}
+
+#homepage{
+	text-align: center;
+	width: 400px;
+	margin-top: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	border-style:solid;
+	border-color: black;
+	border-width: 1px;
+	background-color: #EEF2FF;
+}
+
+
+#searchHead{
+	clear: both;
+	text-align: center;
+}
+
+.searchResult{
+	clear: both;
+	text-align: center;
+	font-size: 14pt;
+}
+

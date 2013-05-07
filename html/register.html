@@ -13,20 +13,45 @@
 	</head>
 	<body>
 		<form id="register" onsubmit="return false;" method="post">
-				<h2> Required Fields </h2>
-    			First Name: <input type="text" id="first_name" name="first_name" maxlength="30" />
-				Last Name: <input type="text" id="last_name" name="last_name" maxlength="30" />
-    			Email: <input type="text" id="email" name="email" maxlength="50" />
-				Password: <input type="password" name="password" />
-   				Password Again: <input type="password" name="password2" />
-				<h2> Optional Fields </h2>
-				Age: <input type="text" id="age" name="age" maxlength="50" />
-				Gender: <select name="gender">
-					<option value="male">male</option>
-					<option value="female">female</option>
-					<option value="unspecified">unspecified</option>
-				</select>
+			
+			<h2> Required Fields </h2>
+			<table>
+				<tr>
+    					<td>First Name:</td> <td><input type="text" id="first_name" name="first_name" maxlength="30" /></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td> <td><input type="text" id="last_name" name="last_name" maxlength="30" /></td>
+				</tr>
+				<tr>
+    					<td>Email:</td><td><input type="text" id="email" name="email" maxlength="50" /></td>
+				</tr>
+				<tr>
+					<td>Password:</td><td><input type="password" name="password" /></td>
+				</tr>
+				<tr>
+   					<td>Password Again:</td><td><input type="password" name="password2" /></td>
+				</tr>		
+
+			</table>
+
+			<br/><br/>
+
+			<h2> Optional Fields </h2>
+			<table>
+				<tr>
+					<td>Age:</td><td><input type="text" id="age" name="age" maxlength="50" /></td>
+				</tr>
+				<tr>
+					<td>Gender:</td><td><select name="gender">
+						<option value="male">male</option>
+						<option value="female">female</option>
+						<option value="unspecified">unspecified</option>
+					</select></td>
+				</tr>
+			<table>
     		<input type="submit" value="Register"/>
+			
+			
 		</form>
 		<span id=errorMessage> </span>
 		<br/>
