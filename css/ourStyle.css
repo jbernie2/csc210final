@@ -55,10 +55,6 @@ tr:nth-child(odd){
   background-color: white;
 }
 
-a#register{
-	position:absolute;
-	top: 50px;
-}
 
 form{
 	text-align: left;

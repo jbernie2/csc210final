@@ -5,7 +5,7 @@
                         <input type="text" name="email" placeholder="E-mail"/>
                         <input type="password" name="password" placeholder="Password"/>
                         <input type="submit" value="Login" />
-                        </form>
-                        <a href="../html/register.html" id="register">Register an account</a>
+                        <a href="../html/register.html">Register an account</a>
+			</form>
         </div>
 
