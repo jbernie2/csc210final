@@ -180,3 +180,9 @@ input#inputButton{
 	font-size: 14pt;
 }
 
+#response{
+	font-family:sans-serif;
+	clear:both;
+	text-align:center;
+	background-color:#A3FFA3;
+}

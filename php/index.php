@@ -33,8 +33,8 @@
 		<?php include_once('banner/banner.php'); ?>
 		<?php 
 			if($loggedIn){
+				echo "<div id='response'> </div>"; 
 				getPrograms();
-				echo "<span id='response'> </span>"; 
 			}else{
 				echo "<div id='homepage'>";
 				echo "<h2>Welcome to Grad to Go</h2>";
