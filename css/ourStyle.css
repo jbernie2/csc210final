@@ -20,10 +20,13 @@ form{
 	height: 10px;
 }
 
-
 input#more{
 	width:300px;
 	height:40px;
+	float: right;
+}
+
+input#submitChanges{
 	float: right;
 }
 
@@ -31,6 +34,20 @@ div#inputButton{
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
+}
+
+div#holdButton{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+div#userPrograms{
+	position: absolute;
+	top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 input#inputButton{
@@ -113,7 +130,6 @@ table{
 	border-collapse:collapse;
 	margin-left: auto;
 	margin-right: auto;
-	width:70%;
 	text-align:center;
 }
 

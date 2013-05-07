@@ -38,8 +38,8 @@
 		}
 
 		//column titles
-		$table = "<form id='user_programs' onsubmit='return false;'>";
-		$table .= "<table border='1'>";
+		$table = "<div id='userPrograms'><form id='user_programs' onsubmit='return false;'>";
+		$table .= "<table border='0'>";
 		$table .= "<tr>";
 		$table .= "<th> Program Name </th>";
 		$table .= "<th> Due Date </th>";
@@ -71,8 +71,8 @@
 		}
 		$table .= "</table>";
 	
-		$table .= "<input type='submit' value='Submit Changes'/>";
-		$table .= "</form>";
+		$table .= "<div id='holdButton'><input type='submit' id='submitChanges' value='Submit Changes'/></div>";
+		$table .= "</form></div>";
 		
 		echo $table;
 	}
