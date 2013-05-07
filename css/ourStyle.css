@@ -73,7 +73,6 @@ input#more{
 	height:40px;
 	float: right;
 	position: relative;
-	top: -6px;
 }
 
 input#submitChanges{
