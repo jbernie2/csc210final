@@ -1,19 +1,10 @@
 <div id="banner">
 
-	<img href="`" alt="grad2go" width="150" height="75" /> 
-	<div id="search">
-                <form id="search" action="../php/searchresults.php">
-                        <input name="school" placeholder="Search for a school" />
-                        <select placeholder="Pick a program" name="degree" size="1">
-                                <option></option>
-                                <option>Biology</option>
-                                <option>Chemistry</option>
-                                <option>Computer Science</option>
-                                <option>Philosophy</option>
-                        </select>
-                <input type="submit" value="Search"/>
-                </form>
-
+	<img src="../img/logo.png" alt="grad2go" height="75" /> 
+	<div id="buttonArea">
+		<form id="button" action="../html/search.html">
+    			<input type="submit" id="more" value="Click here to search for more grad programs">
+		</form>
 	</div>
 
 	<div id="banner_float">
