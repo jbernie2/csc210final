@@ -7,7 +7,7 @@
 
 		//get session variables
 		if(!isset($_SESSION)) {
-		session_start();
+			session_start();
 		}
 
 		//connect to database
@@ -51,6 +51,7 @@
 		$table .= "<th> Transcript Sent? </th>";
 		$table .=  "<th> Recommendations Required </th>";
 		$table .= "<th> Recommendations Sent </th>";
+		$table .= "<th> Remove Program </th>";
 		$table .= "</tr>";
 
 		// printing table rows
@@ -58,7 +59,7 @@
 			
 			$schoolID = $row['program_id'];
 
-			$table .= "<tr>";
+			$table .= "<tr id='tr".$schoolID."'>";
 			
 			$table .= "<td>".$row['program_name']."</td>";
 			$table .= "<td>".$row['due_date']."</td>";
@@ -68,7 +69,7 @@
 			$table .= "<td>".makeEditable($schoolID,'transcript_sent',$row['transcript_sent'],'select')."</td>";
 			$table .= "<td>".$row['recs']."</td>";
 			$table .= "<td>".makeEditable($schoolID,'recommendations_sent',$row['recommendations_sent'],'number')."</td>";
-
+			$table .= "<td> <input type='checkbox' name='remove' value='".$schoolID."'> remove <br></td>";
 			$table .= "</tr>\n";
 		}
 		$table .= "</table>";
