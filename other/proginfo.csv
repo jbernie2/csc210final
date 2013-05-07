@@ -4,4 +4,10 @@
 4,Harvard University,Feb 28th,$75,3,Yes,Yes,Harvard University,http://harvard.edu/cas/philosophy,MA,Philosophy
 5,Yale University,Feb 29th,$115,3,Yes,Yes,Yale University,http://yale.edu/philo/grad,PhD,Philosophy
 6,University of Chicago,Jan 1st,$60,3,Yes,Yes,University of Chicago,http://chemistry.uchicago.edu,PhD,Chemistry
-7,University of Michigan,Jan 1st,$0,3,Yes,Yes,University of Michigan,http:/http://www.umich.edu/~michchem/,PhD,Chemistry
+7,University of Michigan,Jan 1st,$0,3,Yes,Yes,University of Michigan,http://www.umich.edu/~michchem/,PhD,Chemistry
+8,Carnegie Mellon University,Dec 2nd,$75.00,3,Yes,Yes,Carnegie Mellon University,http://www.cs.cmu.edu/,PhD,Computer Science
+9,Stanford University,Dec 10th,$125.00,3,Yes,Yes,Stanford University,http://www-cs.stanford.edu,PhD,Computer Science
+10,University of Washington,Dec 17th,$75.00,3,Yes,Yes,University of Washington,http://www.cs.washington.edu/,PhD,Computer Science
+11,University of Rochester,Dec 15th,$0.00,3,Yes,Yes,University of Rochester,http://cs.rochester.edu,PhD,Computer Science
+12,Massachusetts Institute of Technology,Dec 15th,$100.00,3,Yes,Yes,Massachusetts Institute of Technology,http://www.eecs.mit.edu/,PhD,Computer Science
+13,University of Illinois-Urbana-Champaign,Dec 15th,$70.00,3,Optional,Yes,University of Illinois-Urbana-Champaign,http://cs.illinois.edu,PhD,Computer Science
