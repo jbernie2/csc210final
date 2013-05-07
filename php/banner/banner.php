@@ -5,6 +5,7 @@
 		<form id="button" action="../php/search.php">
     			<input type="submit" id="more" value="Click here to search for more grad programs">
 		</form>
+
 	</div>
 
 	<div id="banner_float">
